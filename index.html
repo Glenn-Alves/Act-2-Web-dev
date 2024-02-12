@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form</title>
+
+<style>
+.form-container {
+    display: inline-block; 
+    margin-right: 20px; 
+}
+
+fieldset {
+    max-width: fit-content;
+    background-color: wheat;
+    border-radius: 10px;
+}
+
+legend {
+    color: white;
+    background-color: rgb(172, 15, 15);
+    padding: 5px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    max-width: 410px;
+}
+
+.container #label {
+    width: 200px;
+}
+
+#data, #data2 {
+    float: right;
+   width: 200px; 
+}
+
+#select {
+    float: right;
+}
+
+.container select {
+    flex: 1;
+}
+
+#data2 {
+    width: 60px;
+    margin-left: auto; 
+}
+
+.radio{
+    border: 1px solid black;
+    padding-right: 110px;
+    height: 30px;
+    width: auto;
+}
+
+.textarea{
+    margin-top: 10px;
+}
+
+.textarea textarea{
+    margin-top: 10px;
+    width: 400px;
+    height: 115px;
+}
+
+.btn {
+    margin: 20px;
+    margin-left: 350px;
+}
+
+#btn2 {
+    margin-left: 25px;
+}
+.btn #btn1 {
+    font-size: 20px;
+    height: 35px;
+    width: 180px; 
+}
+.btn #btn2 {
+    font-size: 20px;
+    height: 35px;
+    width: 80px; 
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<div class="form-container">
+ <fieldset>
+ <legend>Customer Information</legend>
+
+ <div class="container">
+ <label for="name*" id="label">Name*</label>
+ <input type="text" required id="data" name="name" placeholder="First and last name"> 
+ </div>
+
+ <div class="container">
+ <label for="streetaddress" id="label">Street Address</label>
+ <input type="text" id="data" name="streetaddress">
+ </div>
+
+ <div class="container">
+ <label for="city" id="label">City</label>
+ <input type="text" id="data" name="city">
+ </div>
+
+ <div class="container">
+ <label for="state" id="label">State</label>
+ <input type="text" id="data" name="state">
+ </div>
+
+ <div class="container">
+ <label for="postalcode" id="label">Postal Code</label>
+ <input type="text" required id="data" placeholder="NNNNN (-NNNN)">
+ </div>
+
+ <div class="container">
+ <label for="phonenumber" id="label">Phone Number</label>
+ <input type="text" required id="data" placeholder="(NNN) NNN-NNNN" >
+ </div>
+
+ <div class="container">
+ <label for="email" id="label">Email*</label>
+ <input type="text" id="data" name="email">
+ </div>
+
+<div class="container">
+    <label for="info" id="label">Where did you hear about us? <br> (Select all that apply)</label>
+    <select id="select" name="info" size="5" id="select">
+        <option value="Internet">Internet</option>
+        <option value="Magazine">Magazine</option>
+        <option value="Newspaper">Newspaper</option>
+        <option value="Word of Mouth">Word of Mouth</option>
+        <option value="Other">Other</option>
+    </select>
+</div>
+
+ <div class="container">
+ <label for="food" id="label">What's your favorite food? </label>
+ <input type="text" id="data" name="food">
+ </div>
+
+<div class="container">
+    <label for="dine">How many times do you dine out per month? </label>
+    <input type="text" id="data2" name="dine">
+</div>
+
+<div class="container">
+    <input type="checkbox"> Add me to your mailing list for great coupons and specials!
+</div>
+
+<!--SEPERATION!!!!!!!!!!!!!!!!!!!-->
+</fieldset>
+</div>
+
+<div class="form-container">
+ <fieldset>
+ <legend>Share Your Experience at Red Ball Pizza</legend>
+
+ <div class="container">
+ <label for="name*" id="label">Date of visit</label>
+ <input type="date" required id="data" name="visit"> 
+ </div>
+
+ <div class="container">
+ <label for="order" id="label">Order type</label>
+ <select id="select" name="info" id="select">
+    <option value="DineIn">Dine In</option>
+    <option value="TakeOut">Take Out</option>
+</select>
+ </div>
+
+ <div class="container">
+ <label for="service" id="label">Was your service friendly?</label>
+
+    <form class="radio">
+        <input type="radio" id="Yes" value="Yes">
+        <label for="Yes">Yes</label>
+        <input type="radio" id="No" value="No">
+        <label for="No">No</label>
+    </form>
+    
+ </div>
+
+ <div class="container">
+    <label for="service" id="label">Was your order correct?</label>
+   
+       <form class="radio">
+           <input type="radio" id="Yes" value="Yes">
+           <label for="Yes">Yes</label>
+           <input type="radio" id="No" value="No">
+           <label for="No">No</label>
+       </form>
+       
+</div>
+<div class="container">
+    <label for="service" id="label">Was your food hot?</label>
+   
+       <form class="radio">
+           <input type="radio" id="Yes" value="Yes">
+           <label for="Yes">Yes</label>
+           <input type="radio" id="No" value="No">
+           <label for="No">No</label>
+       </form>
+       
+</div>
+
+ <div class="container">
+ <label for="rate" id="label">Rate the overall service <br> (0 = Poor ; 10 = Great)</label>
+ 0<input type="range" min="0" max="11" id="data">10
+ </div>
+
+ <div class="textarea">
+ Tell us more about your Experience!<br>
+ <textarea></textarea>
+ </div>
+</fieldset>
+</div>
+
+<div class="btn">
+<button id="btn1" href="https://www.pizzahut.com.ph/">Submit my survey</button> 
+<button id="btn2">Cancel</button>
+</div>
+
+<script>document.getElementById("btn1").addEventListener("click", function() {
+    window.location.href = "https://www.pizzahut.com.ph/";
+  });</script>
+</body>
+</html>
